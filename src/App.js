@@ -1,20 +1,35 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import Work from "./components/Work";
+import Image from "./components/Image";
+import { Mainhome } from "./components/Mainhome";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+
+} from "react-router-dom";
+
+
+const router = createBrowserRouter([
+  
+  {
+    path: "/",
+    element: <Mainhome />,
+
+
+  },
+  {
+    path: "/resume",
+    element: <Image />,
+
+  },
+]);
 
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
+      <RouterProvider router={router} />
+      
+      {/* <Contact /> */}
     </div>
   );
 }

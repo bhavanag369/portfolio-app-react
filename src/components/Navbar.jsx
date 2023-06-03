@@ -11,6 +11,8 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
+//import '../assets/resume.png';
+import resume from '../assets/resume.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -18,9 +20,9 @@ const Navbar = () => {
 
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-      <div>
+      {/* <div>
         <img src={Logo} alt='Logo Image' style={{ width: '200px' }} />
-      </div>
+      </div> */}
 
       {/* menu */}
       <ul className='hidden md:flex'>
@@ -44,11 +46,11 @@ const Navbar = () => {
             Work
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='contact' smooth={true} duration={500}>
             Contact
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       {/* Hamburger */}
@@ -97,11 +99,12 @@ const Navbar = () => {
 
       {/* Social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        {/* <img src={resume} alt="resume" /> */}
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://www.linkedin.com/in/bhavana-giduturi-1034591b1/'
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -109,7 +112,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://github.com/bhavanag369'
             >
               Github <FaGithub size={30} />
             </a>
@@ -125,9 +128,8 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Resume <BsFillPersonLinesFill size={30} />
+              href='/resume' target='_blank'
+            >resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>
